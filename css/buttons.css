@@ -1,0 +1,29 @@
+.button {
+    inline-size: 32px; /* Longitud horizontal*/
+    block-size: 32px; /* Longitud vertical*/
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.button:active{ /* active quiere decir que es cuando se clickea la clase en cuestion (button) */
+    transform: scale(0.9);/* al clickear se reduce el tamaño del boton a un 90% */
+}
+#play {
+    background-image: url("../images/play.svg");
+}
+#pause {
+    background-image: url("../images/pause.svg");   
+}
+#backward {
+    background-image: url("../images/-10.svg");   
+}
+#forward {
+    background-image: url("../images/+10.svg");    
+}
+#mute {
+    background-image: url("../images/mute.svg"); 
+}
+#volume {
+    background-image: url("../images/volume.svg");
+    opacity: 0; 
+}

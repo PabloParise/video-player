@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+</head>
+<body>
+    <div class="wrapper"> <!--Clase para encerrar a todo lo del video-->
+        <div class="player">
+            <video id="video" poster="./images/poster.jpg" src="./videos/lofi.mp4"></video> <!--el elemento video puede tener atributos como "controls", "autoplay", etc-->
+            <div class="player-overlay"> <!--Clase para envolver al titulo, botones y barra, para aplicar un estilo en css-->
+                <h2 class="player-title">Programming session & music</h2>
+                <div class="player-actions">
+                    <button class="button" id="backward" aria-label="10 sec backward" title="10 sec backward"></button>
+                    <button class="button" id="play" aria-label="play" title="play"></button>
+                    <button class="button" id="pause" aria-label="pause" title="pause"></button>
+                    <button class="button" id="forward" aria-label="10 sec forward" title="10 sec forward"></button>
+                    <button class="button" id="mute" aria-label="mute" title="mute video"></button>
+                    <button class="button" id="volume" aria-label="full volume" title="full volume"></button>
+                </div>
+                <div class="player-progress">
+                    <input id="progress" type="range" min="0" value="0" step="0.1"> <!--barra de reproduccion del video-->
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="./js/index.js"></script> 
+</body>
+</html>

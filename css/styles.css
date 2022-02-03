@@ -1,0 +1,56 @@
+@import './buttons.css';
+body {
+    background-color: #26B4BC;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+} 
+.player {
+    position: relative;
+}
+.player video {
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    vertical-align: middle;
+    object-fit: cover; /*amplia la imagen de cubierta del video*/
+}
+.wrapper {
+    max-inline-size: 900px;
+    margin: auto;
+}
+.player-title {
+    color: white;
+    margin: 0;
+    inset-inline-start: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    inset-block-start: 5px; /*al ponerle position relative al video (a traves de la clase "player" que es la padre), este atributo lo toma como referencia*/
+}
+.player-actions {
+    position: absolute;
+    inset: 0; /*para que se estire junto con el video*/
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 20px;
+    padding: 35px;
+}
+
+.player-progress {
+    background-color: transparent;
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline: 0;
+    display: flex;
+    padding: 10px;  
+}
+.player-progress input {
+    flex: 1;
+}
+.player-overlay {
+    inset: 0; /*para que se estire con el video*/
+    opacity: 0; /*para que por defecto no se vean los elementos(titulo, botones y barra)*/
+    transition: 0.3s opacity; /*el tiempo para que se activa la opacidad*/
+}
+.player:hover .player-overlay{ /*"hover" se usa para activar alguna propiedad cuando el cursor pasa por encima del elemento en cuestion*/
+    opacity: 1;
+}
